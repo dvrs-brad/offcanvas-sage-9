@@ -1,0 +1,79 @@
+/* Variables */
+$hamburger-color: #fff;
+$sidenav-background-color: #212529;
+$sidenav-color: #fff;
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: $sidenav-background-color;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  .custom-logo {
+    max-width: 200px;
+  }
+
+  hr {
+    background-color: $sidenav-color;
+  }
+
+  /* The navigation menu links */
+  .navbar-nav {
+    padding: 8px 8px 8px 32px;
+
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      color: $sidenav-color;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .dropdown-menu {
+      background-color: $sidenav-background-color;
+
+      .dropdown-item:focus,
+      .dropdown-item:hover {
+        background-color: $sidenav-background-color;
+      }
+    }
+  }
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Hamburger Icon */
+.mobile-menu {
+  color: $hamburger-color;
+}
